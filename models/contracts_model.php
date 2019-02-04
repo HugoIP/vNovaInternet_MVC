@@ -19,9 +19,12 @@ class contracts_model{
 	public function get_contractsByClient($clientId){
 		//find only contracts by client
 		$query=$this->db->query("select * from `ClientePlanesinternet` where `id_cliente`=`$clientId`;");
-		while($rows=$query->fetch_assoc())
-		{
-			$this->contracts[]=$rows;
+		$total_num_rows = $query->num_rows;
+		if ($total_num_rows > 0) {
+			while($rows=$query->fetch_assoc())
+			{
+				$this->contracts[]=$rows;
+			}
 		}
 		return $this->contracts;
 	}
