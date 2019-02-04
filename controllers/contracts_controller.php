@@ -28,7 +28,7 @@ function getContractsJSON(){
 		$temp["contracts"]=$collect;
 
 	}
-	$dataContracts=$temp;
+	$dataContracts[]=$temp;
 	//echo json_encode($dataContracts);
 }
 
