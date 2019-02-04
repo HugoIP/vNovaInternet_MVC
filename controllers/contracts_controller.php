@@ -13,6 +13,7 @@ function getContractsJSON(){
 		    'name' => $dat["text_nombre"],
 		    'contracts' => array()
 		);
+		echo $dat["id_cliente"]." ".$dat["text_nombre"];
 		$contractsByClient=$contracts-> get_contractsByClient($dat["id_cliente"]);
 		$collect = array();
 		foreach($contractsByClient as  $contr){
