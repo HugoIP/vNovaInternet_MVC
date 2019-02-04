@@ -5,8 +5,8 @@ $client=new clients_model();
 $data=$client->get_clients();
 $contracts=new contracts_model();
 $dataContracts=array();
-//getContractsJSON();
-//function getContractsJSON(){
+getContractsJSON();
+function getContractsJSON(){
 	$temp=array();
 	foreach($data as $dat){
 		$temp[] = array(
@@ -15,7 +15,7 @@ $dataContracts=array();
 		);
 		$contractsByClient=$contracts-> get_contractsByClient($dat["id_cliente"]);
 		$collect = array();
-
+		echo sizeof($contractsByClient);
 		foreach($contractsByClient as  $contr){
 			$tempContracts = array(
 			    'contrato' => $contr["id_contratoInternet"],
@@ -32,7 +32,7 @@ $dataContracts=array();
 	}
 	$dataContracts[]=$temp;
 	//echo json_encode($dataContracts);
-//}
+}
 
 //call view
 require_once("views/contracts_view.php");
