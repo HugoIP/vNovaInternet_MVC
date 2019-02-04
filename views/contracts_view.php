@@ -5,7 +5,6 @@
 </head>
 <body>
 <?php 
-	echo $dataContracts;
 	echo json_encode($dataContracts);
  ?>
 </body>
