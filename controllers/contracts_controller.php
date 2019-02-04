@@ -5,10 +5,9 @@ $client=new clients_model();
 $data=$client->get_clients();
 $contracts=new contracts_model();
 $dataContracts=array();
-getContractsJSON();
-function getContractsJSON(){
+//getContractsJSON();
+//function getContractsJSON(){
 	$temp=array();
-	echo "this line is in start";
 	foreach($data as $dat){
 		$temp = array(
 		    'name' => $dat["text_nombre"],
@@ -33,7 +32,7 @@ function getContractsJSON(){
 	}
 	$dataContracts[]=$temp;
 	//echo json_encode($dataContracts);
-}
+//}
 
 //call view
 require_once("views/contracts_view.php");
