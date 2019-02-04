@@ -6,7 +6,7 @@
 <body>
 <?php 
 	foreach($data as $dat){
-		echo $dat["text_nombre"]."<br/>";
+		echo $dat["text_nombre"]."      ".$dat["text_status"]."<br/>";
 	}
  ?>
 </body>
