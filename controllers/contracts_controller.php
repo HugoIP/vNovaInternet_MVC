@@ -3,10 +3,10 @@ require_once("models/contracts_model.php");
 require_once("models/clients_model.php");
 $client=new clients_model();
 $data=$client->get_clients();
-$contracts=new contracts_model();
 $dataContracts=array();
 getContractsJSON($data);
 function getContractsJSON($data){
+	$contracts=new contracts_model();
 	$temp=array();
 	foreach($data as $dat){
 		$temp[] = array(
