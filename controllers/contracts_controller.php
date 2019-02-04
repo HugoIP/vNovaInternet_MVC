@@ -15,7 +15,6 @@ function getContractsJSON($data){
 		);
 		$contractsByClient=$contracts-> get_contractsByClient($dat["id_cliente"]);
 		$collect = array();
-		echo sizeof($contractsByClient);
 		foreach($contractsByClient as  $contr){
 			$tempContracts = array(
 			    'contrato' => $contr["id_contratoInternet"],
