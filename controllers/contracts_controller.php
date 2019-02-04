@@ -8,6 +8,7 @@ $dataContracts=array();
 getContractsJSON();
 function getContractsJSON(){
 	$temp=array();
+	echo "this line is in start";
 	foreach($data as $dat){
 		$temp = array(
 		    'name' => $dat["text_nombre"],
