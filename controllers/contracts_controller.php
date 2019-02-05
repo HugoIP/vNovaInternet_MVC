@@ -3,9 +3,8 @@ require_once("models/contracts_model.php");
 require_once("models/clients_model.php");
 $client=new clients_model();
 $data=$client->get_clients();
-$dataContracts=array();
-getContractsJSON($data);
-function getContractsJSON($data){
+$dataContracts=getContractsJSON($data);
+public function getContractsJSON($data){
 	$contracts=new contracts_model();
 	$temp=array();
 	foreach($data as $dat){
@@ -29,7 +28,7 @@ function getContractsJSON($data){
 		$temp["contracts"]=$collect;
 
 	}
-	$dataContracts[]=$temp;
+	return $temp;
 	//echo json_encode($dataContracts);
 }
 
