@@ -10,6 +10,7 @@ function getContractsJSON($data){
 	foreach($data as $dat){
 		$temp[] = array(
 		    'name' => $dat["text_nombre"],
+		    'id' => $dat["id_cliente"],
 		    'size' => 0,
 		    'contracts' => array()
 		);
