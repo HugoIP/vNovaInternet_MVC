@@ -19,7 +19,7 @@ function getContractsJSON($data){
 			    'contrato' => $contr["id_contratoInternet"],
 			    'plan' => $contr["id_planInternet"],
 			    'fechaInicio' => $contr["date_fechaInicioPeriodo"],
-			    'FechaFin' => $contr["date_fechaFechaFinPeriodo"]
+			    'FechaFin' => $contr["date_fechaFinPeriodo"]
 
 			);
 			$collect[]=$tempContracts;
