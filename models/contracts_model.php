@@ -24,7 +24,7 @@ class contracts_model{
 	    {
 	     //... 
 	    }
-	    else if (is_object($sqlResult))
+	    else if (is_object($$query))
 	    {
 	        $total_num_rows = $query->num_rows;
 	    }
