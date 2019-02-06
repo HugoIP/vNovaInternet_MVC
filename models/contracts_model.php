@@ -32,7 +32,7 @@ class contracts_model{
 	    {
 	        $total_num_rows = 0;
 	    }
-		echo $clientId." q:".$total_num_rows;
+		echo " -i: ".$clientId." q:".$total_num_rows;
 		if ($total_num_rows > 0) {
 			while($rows=$query->fetch_assoc())
 			{
