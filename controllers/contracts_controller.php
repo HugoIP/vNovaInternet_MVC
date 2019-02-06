@@ -4,7 +4,7 @@ require_once("models/clients_model.php");
 $client=new clients_model();
 $data=$client->get_clients();
 $dataContracts=getContractsJSON($data);
-public function getContractsJSON($data){
+function getContractsJSON($data){
 	$contracts=new contracts_model();
 	$temp=array();
 	foreach($data as $dat){
