@@ -6,8 +6,8 @@ $data=$client->get_clients();
 $dataContracts=getContractsJSON($data);
 function getContractsJSON($data){
 	$contracts=new contracts_model();
+	$temp=array();
 	foreach($data as $dat){
-		$temp=array();
 		$temp[] = array(
 		    'name' => $dat["text_nombre"],
 		    'contracts' => array()
@@ -15,6 +15,7 @@ function getContractsJSON($data){
 		$contractsByClient=$contracts-> get_contractsByClient($dat["id_cliente"]);
 		$collect = array();
 		foreach($contractsByClient as  $contr){
+			$collect = array();
 			$tempContracts = array(
 			    'contrato' => $contr["id_contratoInternet"],
 			    'plan' => $contr["id_planInternet"],
