@@ -22,7 +22,7 @@ function getContractsJSON($data){
 		echo " size ". $temp["size"];
 		$collect = array();
 		foreach($contractsByClient as  $contr){
-			echo "contrato ". $contr["id_contratoInternet"];
+			echo "contrato ". $contr["id_contratoInternet"] ." //";
 			$tempContracts = array(
 			    'contrato' => $contr["id_contratoInternet"],
 			    'plan' => $contr["id_planInternet"],
