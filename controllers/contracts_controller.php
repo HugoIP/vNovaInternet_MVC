@@ -15,6 +15,7 @@ function getContractsJSON($data){
 		    'size' => 0,
 		    'contracts' => array()
 		);
+		$contractsByClient=array();
 		$contractsByClient=$contracts-> get_contractsByClient($dat["id_cliente"]);
 
 		$temp["size"]=sizeof($contractsByClient);
