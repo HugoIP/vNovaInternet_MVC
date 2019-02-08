@@ -9,9 +9,7 @@
 	//echo $container;
 	$json_a = json_decode($container, TRUE);
 	$json_o = json_decode($container);
-
-
-
+?>
 	<table>
 	<tbody>
 		<tr>
@@ -26,6 +24,5 @@
 		<?php endforeach; ?>
 	</tbody>
 </table>
- ?>
 </body>
 </html>
