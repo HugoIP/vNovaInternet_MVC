@@ -14,7 +14,7 @@
 	{
 	    foreach($value as $key => $personal)
 	    {
-	        echo $person. " with ".$key . " is ".$personal;
+	        echo $person." v ".$value. " with ".$key . " is ".$personal;
 	        echo "<br>";
 	    }
 
