@@ -24,8 +24,8 @@ function getContractsJSON($data){
 		}
 
 		$temp[] = array(
+			'id' => $dat["id_cliente"],
 		    'name' => $dat["text_nombre"],
-		    'id' => $dat["id_cliente"],
 		    'contracts' => $collect
 		);
 		
