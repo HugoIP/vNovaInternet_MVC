@@ -12,13 +12,13 @@
 
 
 
-	foreach($json_a as $clie => $value)
-	{
-	    foreach($value as $key => $personal)
-	    {
-	        echo $clie. " with ".$key . " is ".$personal;
-	        echo "<br>";
-	    }
+	foreach($json_a as $object) {
+
+        foreach($object as $value) {
+
+            echo $value;
+
+        }
 
 	}
  ?>
