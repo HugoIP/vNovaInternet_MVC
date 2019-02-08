@@ -13,7 +13,6 @@ function getContractsJSON($data){
 		$contractsByClient=$contracts-> get_contractsByClient($dat["id_cliente"]);
 		$collect = array();
 		foreach($contractsByClient as  $contr){
-			echo "contrato ". $contr["id_contratoInternet"] ." //";
 			$tempContracts = array(
 			    'contrato' => $contr["id_contratoInternet"],
 			    'plan' => $contr["id_planInternet"],
@@ -27,7 +26,6 @@ function getContractsJSON($data){
 		$temp[] = array(
 		    'name' => $dat["text_nombre"],
 		    'id' => $dat["id_cliente"],
-		    'size' => 0,
 		    'contracts' => $collect
 		);
 		
