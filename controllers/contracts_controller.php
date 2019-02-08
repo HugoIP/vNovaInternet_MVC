@@ -32,7 +32,6 @@ function getContractsJSON($data){
 
 	}
 	return $temp;
-	//echo json_encode($dataContracts);
 }
 
 //call view

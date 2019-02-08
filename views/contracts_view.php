@@ -5,7 +5,22 @@
 </head>
 <body>
 <?php 
-	echo json_encode($dataContracts);
+	$container=json_encode($dataContracts);
+
+	$json_a = json_decode($container, TRUE);
+	$json_o = json_decode($container);
+
+
+
+	foreach($json_a as $clie => $value)
+	{
+	    foreach($value as $key => $personal)
+	    {
+	        echo $clie. " with ".$key . " is ".$personal;
+	        echo "<br>";
+	    }
+
+	}
  ?>
 </body>
 </html>
