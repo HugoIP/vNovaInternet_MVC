@@ -12,7 +12,7 @@
 
 
 
-	foreach($json_a as $object) {
+	foreach($dataContracts as $object) {
 
         foreach($object as $value) {
 
