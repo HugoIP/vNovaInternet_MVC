@@ -9,17 +9,8 @@ function getContractsJSON($data){
 	$temp=array();
 	foreach($data as $dat){
 		$contracts=new contracts_model();
-		$temp[] = array(
-		    'name' => $dat["text_nombre"],
-		    'id' => $dat["id_cliente"],
-		    'size' => 0,
-		    'contracts' => array()
-		);
 		$contractsByClient=array();
 		$contractsByClient=$contracts-> get_contractsByClient($dat["id_cliente"]);
-
-		$temp["size"]=sizeof($contractsByClient);
-		echo " size ". $temp["size"];
 		$collect = array();
 		foreach($contractsByClient as  $contr){
 			echo "contrato ". $contr["id_contratoInternet"] ." //";
@@ -33,7 +24,13 @@ function getContractsJSON($data){
 			$collect[]=$tempContracts;
 		}
 
-		$temp["contracts"]=$collect;
+		$temp[] = array(
+		    'name' => $dat["text_nombre"],
+		    'id' => $dat["id_cliente"],
+		    'size' => 0,
+		    'contracts' => $collect
+		);
+		
 
 	}
 	return $temp;
