@@ -18,8 +18,11 @@
 	        echo "<br>";
 	        foreach($personal as $subkey => $subpersonal)
 		    {
-		        echo $subkey. " is ".$subpersonal;
-		        echo "<br>";
+		        foreach($subpersonal as $fkey => $fpersonal)
+			    {
+			        echo $fkey. " is ".$fpersonal;
+			        echo "<br>";
+			    }
 		    }
 	    }
 
