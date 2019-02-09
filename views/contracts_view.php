@@ -14,16 +14,23 @@
 	{
 	    foreach($value as $key => $personal)
 	    {
-	        echo $key . " : ".$personal;
-	        echo "<br>";
-	        foreach($personal as $subkey => $subpersonal)
-		    {
-		        foreach($subpersonal as $fkey => $fpersonal)
+	    	if(gettype($personal)
+	    	{
+		        
+		        foreach($personal as $subkey => $subpersonal)
 			    {
-			        echo $fkey. " is ".$fpersonal;
-			        echo "<br>";
+			        foreach($subpersonal as $fkey => $fpersonal)
+				    {
+				        echo $fkey. " is ".$fpersonal;
+				        echo "<br>";
+				    }
 			    }
-		    }
+			}
+			else
+			{
+				echo $key . " : ".$personal;
+		        echo "<br>";
+			}
 	    }
 
 	}
