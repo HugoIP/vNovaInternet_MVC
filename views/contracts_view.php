@@ -9,7 +9,7 @@
 	//echo $container;
 	$json_a = json_decode($container, TRUE);
 	$json_o = json_decode($container);
-	php
+	/*
 	foreach($json_a as $person => $value)
 	{
 	    foreach($value as $key => $personal)
@@ -33,7 +33,7 @@
 			}
 	    }
 
-	}
+	}*/
 ?>
 	<table>
 	<tbody>
