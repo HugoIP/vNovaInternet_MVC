@@ -14,8 +14,13 @@
 	{
 	    foreach($value as $key => $personal)
 	    {
-	        echo $person." v ".$value. " with ".$key . " is ".$personal;
+	        echo $key . " : ".$personal;
 	        echo "<br>";
+	        foreach($personal as $subkey => $subpersonal)
+		    {
+		        echo $subkey. " is ".$subpersonal;
+		        echo "<br>";
+		    }
 	    }
 
 	}
