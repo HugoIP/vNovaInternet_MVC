@@ -9,14 +9,14 @@
 	//echo $container;
 	$json_a = json_decode($container, TRUE);
 	$json_o = json_decode($container);
-
+	php
 	foreach($json_a as $person => $value)
 	{
 	    foreach($value as $key => $personal)
 	    {
 	    	if(gettype($personal)=="array")
 	    	{
-		        
+		        //check list off contracts
 		        foreach($personal as $subkey => $subpersonal)
 			    {
 			        foreach($subpersonal as $fkey => $fpersonal)
@@ -41,10 +41,32 @@
 			<th>Id</th>
 			<th>Nombre</th>
 		</tr>
-		<?php foreach ($json_a as $client) : ?>
+		<?php foreach ($json_a as $person => $value) : ?>
         <tr>
-            <td> <?php echo $client->id; ?> </td>
-            <td> <?php echo $client->name; ?> </td>
+        <?php 
+	        foreach($value as $key => $personal)
+		    {
+		    	if(gettype($personal)=="array")
+		    	{
+			        //check list off contracts
+			        foreach($personal as $subkey => $subpersonal)
+				    {
+				        foreach($subpersonal as $fkey => $fpersonal)
+					    {
+
+				    	?>
+            <td> <?php echo "". $fpersonal ?> </td>
+            			<?php 
+	             		}
+				    }
+				}
+				else
+				{
+					?>
+			<td> <?php echo $personal ?> </td>
+			        <?php 
+				}
+            ?>
         </tr>
 		<?php endforeach; ?>
 	</tbody>
