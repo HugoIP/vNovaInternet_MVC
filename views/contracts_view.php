@@ -14,7 +14,7 @@
 	{
 	    foreach($value as $key => $personal)
 	    {
-	    	if(gettype($personal)
+	    	if(gettype($personal)=="array")
 	    	{
 		        
 		        foreach($personal as $subkey => $subpersonal)
