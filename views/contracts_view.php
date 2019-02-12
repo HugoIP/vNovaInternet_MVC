@@ -42,11 +42,11 @@
 			<th>Nombre</th>
 		</tr>
 		<?php foreach ($json_a as $person => $value){ ?>
-        <tr> 	
+        <tr>
+        	<tr> 	
         <?php 
 	        foreach($value as $key => $personal)
 		    {
-		    	echo "<tr>";
 		    	if(gettype($personal)=="array")
 		    	{
 			        //check list off contracts
