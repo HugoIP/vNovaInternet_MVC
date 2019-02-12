@@ -7,7 +7,7 @@
 <?php 
 	$container=json_encode($dataContracts);
 	//echo $container;
-	$json_a = json_decode($container);
+	$json_a = json_decode($container, TRUE);
 	$json_o = json_decode($container);
 	/*
 	foreach($json_a as $person => $value)
@@ -46,7 +46,7 @@
         <?php 
 	        foreach($value as $key => $personal)
 		    {
-		    	echo $personal->{"id"}."::".$personal->{"name"};
+		    	echo $personal["id"]."::".$personal["name"];
 		    	if(gettype($personal)=="array")
 		    	{
 			        //check list off contracts
