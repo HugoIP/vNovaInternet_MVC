@@ -44,7 +44,7 @@
 		<?php foreach ($json_a as $person => $value){ ?>
         <tr>	
         <?php 
-        echo $person->{'id'}."::".$person->{'name'};
+        echo $value->{'id'}."::".$value->{'name'};
 	        foreach($value as $key => $personal)
 		    {
 		    	if(gettype($personal)=="array")
