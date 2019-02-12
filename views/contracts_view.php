@@ -73,7 +73,7 @@
 				}
             ?>
         	
-		<?php } ?>
+		<?php } echo "<br>"; ?>
 		</tr>
 <?php } ?>
 	</tbody>
