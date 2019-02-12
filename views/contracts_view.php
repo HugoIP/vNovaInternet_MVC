@@ -35,7 +35,7 @@
 
 	}*/
 ?>
-	<table>
+<table>
 	<tbody>
 		<tr>
 			<th>Id</th>
@@ -68,7 +68,8 @@
 				}
             ?>
         </tr>
-		<?php } ?>
+		<?php }
+	 } ?>
 	</tbody>
 </table>
 </body>
