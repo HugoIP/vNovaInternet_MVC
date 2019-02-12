@@ -4,6 +4,7 @@ require_once("models/clients_model.php");
 $client=new clients_model();
 $data=$client->get_clients();
 $dataContracts=getContractsJSON($data);
+showStatus();
 function getContractsJSON($data){
 	
 	$temp=array();
@@ -33,7 +34,10 @@ function getContractsJSON($data){
 	}
 	return $temp;
 }
-
+function showStatus()
+{
+	updateStatus();
+}
 //call view
 require_once("views/contracts_view.php");
  ?>
