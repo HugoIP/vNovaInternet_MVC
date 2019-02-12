@@ -7,7 +7,7 @@
 <?php 
 	$container=json_encode($dataContracts);
 	//echo $container;
-	$json_a = json_decode($container, TRUE);
+	$json_a = json_decode($container);
 	$json_o = json_decode($container);
 	/*
 	foreach($json_a as $person => $value)
