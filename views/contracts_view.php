@@ -7,8 +7,8 @@
 <?php 
 	$container=json_encode($dataContracts);
 	//echo $container;
-	$json_a = json_decode($container, TRUE);
-	$json_o = json_decode($container);
+	//$json_a = json_decode($container, TRUE);//array
+	$json_a = json_decode($container);//object
 	/*
 	foreach($json_a as $person => $value)
 	{
@@ -44,7 +44,7 @@
 		<?php foreach ($json_a as $person => $value){ ?>
         <tr>	
         <?php 
-        echo $value["id"]."::".$value["name"];
+        echo $value->id."::".$value->name;
 	        foreach($value as $key => $personal)
 		    {
 		    	
