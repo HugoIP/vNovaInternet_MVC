@@ -42,8 +42,7 @@
 			<th>Nombre</th>
 		</tr>
 		<?php foreach ($json_a as $person => $value){ ?>
-        <tr>
-        	<tr> 	
+        <tr>	
         <?php 
 	        foreach($value as $key => $personal)
 		    {
@@ -68,7 +67,7 @@
 			        <?php 
 				}
             ?>
-        	</tr>
+        	
 		<?php } ?>
 		</tr>
 <?php } ?>
