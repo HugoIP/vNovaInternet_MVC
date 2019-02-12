@@ -44,9 +44,10 @@
 		<?php foreach ($json_a as $person => $value){ ?>
         <tr>	
         <?php 
+        echo $value["id"]."::".$value["name"];
 	        foreach($value as $key => $personal)
 		    {
-		    	echo $personal["id"]."::".$personal["name"];
+		    	
 		    	if(gettype($personal)=="array")
 		    	{
 			        //check list off contracts
