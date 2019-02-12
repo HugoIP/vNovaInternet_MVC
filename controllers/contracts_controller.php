@@ -14,19 +14,19 @@ function getContractsJSON($data){
 		$collect = array();
 		foreach($contractsByClient as  $contr){
 			$tempContracts = array(
-			    'contrato' => $contr["id_contratoInternet"],
-			    'plan' => $contr["id_planInternet"],
-			    'fechaInicio' => $contr["date_fechaInicioPeriodo"],
-			    'FechaFin' => $contr["date_fechaFinPeriodo"]
+			    "contrato" => $contr["id_contratoInternet"],
+			    "plan" => $contr["id_planInternet"],
+			    "fechaInicio" => $contr["date_fechaInicioPeriodo"],
+			    "FechaFin" => $contr["date_fechaFinPeriodo"]
 
 			);
 			$collect[]=$tempContracts;
 		}
 
 		$temp[] = array(
-			'id' => $dat["id_cliente"],
-		    'name' => $dat["text_nombre"],
-		    'contracts' => $collect
+			"id" => $dat["id_cliente"],
+		    "name" => $dat["text_nombre"],
+		    "contracts" => $collect
 		);
 		
 
