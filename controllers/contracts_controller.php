@@ -4,6 +4,7 @@ require_once("models/clients_model.php");
 $client=new clients_model();
 $data=$client->get_clients();
 $dataContracts=getContractsJSON($data);
+//is test
 showStatus();
 function getContractsJSON($data){
 	
