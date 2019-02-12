@@ -47,7 +47,7 @@ class contracts_model{
 DAY , CURDATE() , `ClientePlanesinternet`.`date_fechaInicioPeriodo`) AS dias,`ClientePlanesinternet`.`id_contratoInternet`, `ClientePlanesinternet`.`id_planInternet`
 FROM`ClientePlanesinternet` WHERE `ClientePlanesinternet`.`text_status`='activo'");
 
-		while ($rows=$query->fetch_assoc()){
+		while ($row=$query->fetch_assoc()){
 		if($row["dias"] == 0){
 			$sql ="";
 			/*PENDIENTES*/
@@ -74,6 +74,8 @@ MONTH),`ClientePlanesinternet`.`date_fechaInicioPeriodo`,'pendiente'
 			}
 	}
 	$query=$this->db->query($sql);
+	 }
+	}
 }
 
  ?>
