@@ -54,9 +54,10 @@
 			        //check list off contracts
 			        foreach($personal as $subkey => $subpersonal)
 				    {
+				    	echo $subpersonal->contrato."::".$subpersonal->plan;
 				        foreach($subpersonal as $fkey => $fpersonal)
 					    {
-					    	echo $fpersonal->contrato."::".$fpersonal->plan;
+
 
 				    	?>
             <td class="subContract"> <?php echo "". $fpersonal ?> </td>
