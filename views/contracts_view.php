@@ -46,7 +46,7 @@
         <?php 
 	        foreach($value as $key => $personal)
 		    {
-		    	echo $key->{"id"}."::".$key->{"name"};
+		    	echo $personal->{"id"}."::".$personal->{"name"};
 		    	if(gettype($personal)=="array")
 		    	{
 			        //check list off contracts
