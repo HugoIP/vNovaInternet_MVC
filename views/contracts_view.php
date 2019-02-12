@@ -54,7 +54,7 @@
 			        //check list off contracts
 			        foreach($personal as $subkey => $subpersonal)
 				    {
-				    	echo $subpersonal->contrato."::".$subpersonal->plan."::".$subpersonal->FechaFin;
+				    	echo "<br>".$subpersonal->contrato."::".$subpersonal->plan."::".$subpersonal->FechaFin;
 				        foreach($subpersonal as $fkey => $fpersonal)
 					    {
 
