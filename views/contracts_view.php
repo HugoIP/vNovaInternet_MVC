@@ -9,7 +9,6 @@
 	//echo $container;
 	//$json_a = json_decode($container, TRUE);//array
 	$json_a = json_decode($container);//object
-	echo $json_a;
 	/*
 	foreach($json_a as $person => $value)
 	{
@@ -51,6 +50,7 @@
 		    	
 		    	if(gettype($personal)=="array")
 		    	{
+		    		echo $personal->contrato."::".$personal->plan;
 			        //check list off contracts
 			        foreach($personal as $subkey => $subpersonal)
 				    {
