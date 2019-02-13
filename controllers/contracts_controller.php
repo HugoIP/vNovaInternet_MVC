@@ -6,7 +6,7 @@ $data=$client->get_clients();
 $dataContracts=getContractsJSON($data);
 //is test
 $contracts=new contracts_model();
-$contracts-> updateStatus();
+//$contracts-> updateStatus();
 function getContractsJSON($data){
 	
 	$temp=array();
